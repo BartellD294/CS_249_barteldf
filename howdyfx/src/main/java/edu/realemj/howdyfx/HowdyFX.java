@@ -9,7 +9,7 @@ import edu.realemj.howdy.HowdyPrinter;
  
 public class HowdyFX extends Application { 
     public void start(Stage primaryStage) {
-        Button btOK = new Button("OK");
+        Button btOK = new Button("OK.");
         Scene scene = new Scene(btOK, 400, 250);
 
         primaryStage.setTitle("Hello from JavaFX!");
