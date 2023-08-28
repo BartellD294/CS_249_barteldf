@@ -6,6 +6,7 @@ public class HowdyPrinter {
         System.out.println("HELLO!  It's me.");
         System.out.println("How are you?");
         System.out.println("I'm fine!");
+        System.out.println("So long!");
     }
 
     public static String getPassword() {
