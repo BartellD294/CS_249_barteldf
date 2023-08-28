@@ -7,6 +7,8 @@ public class HowdyPrinter {
         System.out.println("How are you?");
         System.out.println("I'm fine!");
         System.out.println("So long!");
+        System.out.println("Farewell!");
+        System.out.println("Goodbye!");
     }
 
     public static String getPassword() {
