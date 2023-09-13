@@ -9,8 +9,8 @@ public class NPC {
 
     public NPC(int h, char r)        //JUST "public <name of class>", nothing else
     {
-        health = h;
-        relationship = r;
+        setHealth(r);
+        setRelationship(r);
     }
 
     public int getHealth() {
