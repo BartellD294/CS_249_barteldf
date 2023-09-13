@@ -19,7 +19,7 @@ test {
 }
 
 application {
-    mainClass = "edu.realemj.exercises03.FoodRationer"
+    mainClass = "edu.realemj.exercises04.MathemagicLand"
     mainModule = "profexercisesmod"
 }
 
