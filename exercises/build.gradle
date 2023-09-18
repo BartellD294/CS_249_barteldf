@@ -19,7 +19,7 @@ test {
 }
 
 application {
-    mainClass = "edu.barteldf.exercises03.FoodRationer"
+    mainClass = "edu.barteldf.exercises05.SectionLand"
     mainModule = "exercisesmod"
 }
 
