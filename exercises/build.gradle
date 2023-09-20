@@ -19,7 +19,7 @@ test {
 }
 
 application {
-    mainClass = "edu.barteldf.exercises06.L33tspeak"
+    mainClass = "edu.barteldf.exercises06.OregonTrail"
     mainModule = "exercisesmod"
 }
 
