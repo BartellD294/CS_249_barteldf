@@ -32,22 +32,30 @@ public class GeneralStore
 
     public void printWelcome()
     {
-        //TODO
+        System.out.println("*********************************");
+        System.out.println("* WELCOME TO THE GENERAL STORE! *");
+        System.out.println("*********************************");
     }
 
     public void printSelection()
     {
-        //TODO
+        System.out.println("***********************");
+        System.out.println("* - food");
+        System.out.println("***********************");
     }
 
     public void printOutOfStock(String item)
     {
-        //TODO
+        System.out.println("***********************");
+        System.out.println("Sorry, but we don't have " + item + ".");
+        System.out.println("***********************");
     }
 
     public void printGoodbye()
     {
-        //TODO
+        System.out.println("***********************");
+        System.out.println("Have a nice day!");
+        System.out.println("***********************");
     }
 
     public String askForSelection(Scanner input)
