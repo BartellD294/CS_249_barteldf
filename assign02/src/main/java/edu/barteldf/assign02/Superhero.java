@@ -41,27 +41,28 @@ public class Superhero
     }
     public int calculateBMI()
     {
-        //TODO
-        return 0;
+        return (int)((703 * weight) / (height * height));
     }
     public String getNameString()
     {
-        //TODO
-        return "";
+        return (heroName + " (" +realName + ")");
     }
     public String getHeightString()
     {
-        //TODO
-        return "";
+        int feet = height/12;
+        int inches = height%12;
+        return (feet + "'-" + inches + "\"");
     }
     public String getWeightString()
     {
         //TODO
-        return "";
+        return (weight + " lbs.");
     }
     public String toString()
     {
-        //TODO
-        return "";
+        return ("NAME: " + getNameString() + "\n" +
+                "WEIGHT: " + getWeightString() + "\n" +
+                "HEIGHT: " + getHeightString() + "\n" +
+                "BMI: " + calculateBMI() + "\n");
     }
 }
