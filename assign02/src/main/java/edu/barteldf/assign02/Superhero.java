@@ -49,4 +49,19 @@ public class Superhero
         //TODO
         return "";
     }
+    public String getHeightString()
+    {
+        //TODO
+        return "";
+    }
+    public String getWeightString()
+    {
+        //TODO
+        return "";
+    }
+    public String toString()
+    {
+        //TODO
+        return "";
+    }
 }
