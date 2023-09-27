@@ -11,17 +11,55 @@ public class RandomGrader {
 
         System.out.println("Enter number of students:");
         int studentCnt = input.nextInt();
-        double sumGrades = 0;
 
-        for(int i = 0; i < studentCnt; i++) {
-            int grade = getRandomGrade(rand);
-            sumGrades += grade;
-            String letter = getLetterGrade(grade);
-            printGrade("Student " + (i+1), grade, letter);
-        }
+        int [] allGrades = createRandomGrades(studentCnt, rand);
+        printAllGrades(allGrades);
+        Arrays.sort(allGrades);
+        System.out.println(Arrays.toString(allGrades));
 
-        int aveGrade = (int)Math.round(sumGrades/studentCnt);
+        System.out.println("SORTED:");
+        printAllGrades(allGrades);
+
+        int aveGrade = getAverageGrade(allGrades);
         printGrade("AVERAGE", aveGrade, getLetterGrade(aveGrade));
+
+        int stdGrade = getStdDevGrade(allGrades);
+        System.out.println("STD DEV: " + stdGrade);
+    }
+
+    public static int [] createRandomGrades(int cnt, Random rand) {
+        int [] grades = new int[cnt];
+        for(int i = 0; i <  cnt; i++) {
+            grades[i] = getRandomGrade(rand);
+        }
+        return grades;
+    }
+
+    public static int getStdDevGrade(int [] grades) {
+        int mean = getAverageGrade(grades);
+        double sum = 0.0;
+        for(int g: grades) {
+            g -= mean;
+            g *= g;
+            sum += g;
+        }
+        sum /= grades.length;
+        return (int)Math.round(Math.sqrt(sum));
+    }
+
+    public static void printAllGrades(int [] grades) {
+        for(int i = 0; i < grades.length; i++) {
+            String letter = getLetterGrade(grades[i]);
+            printGrade("Student " + (i+1), grades[i], letter);
+        }
+    }
+
+    public static int getAverageGrade(int [] grades) {
+        double sum = 0.0;
+        for(int g: grades) {
+            sum += g;
+        }
+        return (int)Math.round(sum/grades.length);
     }
 
     public static int getRandomGrade(Random rand) {

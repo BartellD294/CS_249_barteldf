@@ -17,8 +17,11 @@ public class Party {
 
     public void printParty() {
         System.out.println("** PARTY ***********");
-        for(int i = 0; i < people.length; i++) {
-            System.out.println("\t* " + people[i].getName());
+        //for(int i = 0; i < people.length; i++) {
+        //    System.out.println("\t* " + people[i].getName());
+        //}
+        for(Person p: people) {
+            System.out.println("\t* " + p.getName());
         }
         System.out.println("********************");
     }
