@@ -19,7 +19,7 @@ test {
 }
 
 application {
-    mainClass = "edu.barteldf.exercises07.RandomGrader"
+    mainClass = "edu.barteldf.exercises10.ShapeLand"
     mainModule = "exercisesmod"
 }
 

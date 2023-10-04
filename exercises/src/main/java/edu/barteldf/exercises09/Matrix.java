@@ -1,10 +1,22 @@
-package edu.realemj.exercises09;
+package edu.barteldf.exercises09;
 
 public class Matrix {
     private double [][] m;
 
     public Matrix(int rowCnt, int colCnt) {
         m = new double[rowCnt][colCnt];
+    }
+
+    public Matrix(Matrix other)
+    {
+        m = new double[other.getRowCnt()][other.getColCnt()];
+        for (int i = 0; i < other.getRowCnt();i++)
+        {
+            for (int j = 0; j<other.getColCnt();j++)
+            {
+                m[i][j] = other.m[i][j];
+            }
+        }
     }
 
     public int getRowCnt() {

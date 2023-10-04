@@ -1,4 +1,4 @@
-package edu.realemj.exercises09;
+package edu.barteldf.exercises09;
 
 public class MatrixLand {
     public static void main(String [] args) {
