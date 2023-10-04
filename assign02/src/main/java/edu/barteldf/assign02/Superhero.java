@@ -55,7 +55,6 @@ public class Superhero
     }
     public String getWeightString()
     {
-        //TODO
         return (weight + " lbs.");
     }
     public String toString()
