@@ -3,7 +3,7 @@ package edu.barteldf.assign03;
 public class Narrator
 {
     private final int CARD_WIDTH = 50;
-    private final int CARD_HEIGHT = 8;
+    private final int CARD_TEXT_HEIGHT = 4; //total card height = 8 though
     private String [] lines;
     private char boundaryChar;
     public Narrator(String [] lines, char boundaryChar)
@@ -29,18 +29,18 @@ public class Narrator
     {
         this.boundaryChar = boundaryChar;
     }
-    public void setLines(String [] inLines)
+    public void setLines(String [] lines)
     {
-        this.lines = new String [inLines.length];
-        for (int i = 0; i<this.lines.length;i++)
+        this.lines = new String [lines.length];
+        for (int i = 0; i<lines.length;i++)
         {
-            this.lines[i]=inLines[i];
+            this.lines[i]=lines[i];
         }
     }
     public String generateBoundaryLine()
     {
         StringBuilder sb = new StringBuilder();
-        for (int i = 0; i<CARD_WIDTH;i++)
+        for (int i = 0; i<CARD_WIDTH;i++) //CARD_WIDTH = 50
         {
             sb.append(boundaryChar);
         }
@@ -49,12 +49,12 @@ public class Narrator
     }
     public String generateCenteredLine(String text)
     {
-        int numSpacesNeeded, firstHalfSpaces, secondHalfSpaces;
+        int totalSpaces, firstHalfSpaces, secondHalfSpaces;
         StringBuilder sb = new StringBuilder();
         sb.append(boundaryChar);
-        numSpacesNeeded = CARD_WIDTH - text.length()-2;
-        firstHalfSpaces = numSpacesNeeded/2;
-        secondHalfSpaces = numSpacesNeeded-firstHalfSpaces;
+        totalSpaces = CARD_WIDTH - text.length()-2; //50-text.length()-2
+        firstHalfSpaces = totalSpaces/2;
+        secondHalfSpaces = totalSpaces-firstHalfSpaces;
         for (int i = 0; i<firstHalfSpaces;i++)
         {
             sb.append(" ");
@@ -74,24 +74,24 @@ public class Narrator
         int extraLineCount;
         int linesLeft;
         StringBuilder sb = new StringBuilder();
-        for (int lineNum = 0; lineNum < lines.length; lineNum += 4)
+        for (int lineNum = 0; lineNum < lines.length; lineNum += CARD_TEXT_HEIGHT) //CARD_TEXT_HEIGHT = 4
         {
-            linesLeft = lines.length-lineNum-1;
+            linesLeft = lines.length-lineNum;
             sb.append(generateBoundaryLine());
             sb.append(generateCenteredLine(" "));
-            if (linesLeft < 4)
+            if (linesLeft < CARD_TEXT_HEIGHT) //4
             {
                 lineCount = linesLeft;
-                extraLineCount = 4-linesLeft;
+                extraLineCount = CARD_TEXT_HEIGHT-linesLeft; //4-linesLeft
             }
             else
             {
-                lineCount = 4;
+                lineCount = CARD_TEXT_HEIGHT; //4
                 extraLineCount = 0;
             }
             for (int j = 0; j<lineCount;j++)
             {
-                sb.append(lines[lineNum+j]);
+                sb.append(generateCenteredLine(lines[lineNum+j]));
             }
             for (int j = 0; j<extraLineCount;j++)
             {

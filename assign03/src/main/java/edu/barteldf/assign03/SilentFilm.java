@@ -11,7 +11,7 @@ public class SilentFilm
         boundaryCharacter = input.nextLine().charAt(0);
         System.out.println("Enter number of lines:");
         numLines = Integer.parseInt(input.nextLine());
-        String [] allLines = new String [4];
+        String [] allLines = new String [numLines];
         System.out.println("Enter lines:");
         for (int i = 0; i< numLines;i++)
         {
