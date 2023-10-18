@@ -2,17 +2,15 @@ package edu.barteldf.exercises03;
 
 import java.util.Scanner;
 
-public class FoodRationer
-{
-    public static void main(String [] args)
-    {
+public class FoodRationer {
+    public static void main(String [] args) {
         Scanner input = new Scanner(System.in);
         Supplies supplies = new Supplies();
         String [] names = {"Luke", "Han", "Leia"};
         Party party = new Party(names);
         party.printParty();
 
-        System.out.println("Enter amount of food: ");
+        System.out.println("Enter total food:");
         supplies.setTotalFood(input.nextDouble());
         double rations = 10.0;
 

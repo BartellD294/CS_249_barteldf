@@ -7,4 +7,5 @@ module exercisesmod {
     exports edu.barteldf.exercises07;
     exports edu.barteldf.exercises09;
     exports edu.barteldf.exercises10;
+    exports edu.barteldf.exercises11;
 }

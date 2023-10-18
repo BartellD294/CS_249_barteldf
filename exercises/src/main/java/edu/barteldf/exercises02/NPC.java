@@ -2,14 +2,14 @@ package edu.barteldf.exercises02;
 
 public class NPC {
     private int health = 100;
-
     private char relationship = 'N';
 
     public NPC() {}
 
-    public NPC(int h, char r)        //JUST "public <name of class>", nothing else
-    {
-        setHealth(r);
+    public NPC(int h, char r) {
+        //health = h;
+        //relationship = r;
+        setHealth(h);
         setRelationship(r);
     }
 
@@ -17,26 +17,22 @@ public class NPC {
         return health;
     }
 
-    public void setHealth(int h)
-    {
+    public void setHealth(int h) {
         health = h;
         health = Math.max(health, 0);
         health = Math.min(health, 100);
     }
 
-    public char getRelationship()
-    {
+    public char getRelationship() {
         return relationship;
     }
 
-    public boolean setRelationship(char r)
-    {
+    public boolean setRelationship(char r) {
+        // F = friend, N = neutral, E = enemy
         boolean valid = false;
-        //F = friend, N = neutral, E = enemy
         r = Character.toUpperCase(r);
-        if ((r=='F')||(r=='N')||(r=='E'))
-        {
-            relationship=r;
+        if(r == 'F' || r == 'N' || r == 'E') {
+            relationship = r;
             valid = true;
         }
         return valid;

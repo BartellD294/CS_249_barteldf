@@ -1,17 +1,12 @@
 package edu.barteldf.exercises06;
 
-import java.util.Scanner;
-
-public class L33tspeak
-{
-    public static String makeL33t(String s)
-    {
+import java.util.*;
+public class L33tspeak {
+    public static String makeL33t(String s) {
         StringBuilder sb = new StringBuilder();
-        for (int i = 0; i<s.length(); i++)
-        {
+        for(int i = 0; i < s.length(); i++) {
             char c = s.charAt(i);
-            c = switch(c)
-            {
+            c = switch(c) {
                 case 'a','A' -> '4';
                 case 'e','E' -> '3';
                 case 'i','I' -> '1';
@@ -22,16 +17,15 @@ public class L33tspeak
         }
         return sb.toString();
     }
-    public static void main(String [] args)
-    {
+    public static void main(String [] args) {
         Scanner input = new Scanner(System.in);
-        String s;
-        do
-        {
+        String s = "";
+
+        do {
             System.out.println("Enter line:");
             s = input.nextLine();
             String out = makeL33t(s);
             System.out.println(out);
-        } while (s.length() != 0);
+        } while(s.length() != 0);
     }
 }

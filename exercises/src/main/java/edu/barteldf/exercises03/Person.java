@@ -1,34 +1,31 @@
 package edu.barteldf.exercises03;
 
-public class Person
-{
+public class Person {
     private String name = "";
-    private boolean alive;
-    public Person(String n)
-    {
+    private boolean alive = true;
+
+    public Person(String n) {
         name = n;
     }
 
-    public String getName()
-    {
+    public String getName() {
         return name;
     }
-    public boolean isAlive()
-    {
+
+    public boolean isAlive() {
         return alive;
     }
-    public void setAlive(boolean isAlive)
-    {
-       alive = isAlive;
+
+    public void setAlive(boolean living) {
+        alive = living;
     }
 
-    public String toString()
-    {
+    public String toString() {
         String s = name;
-        if (!alive)
-        {
+        if(!alive) {
             s += " (Deceased)";
         }
         return s;
     }
+
 }
