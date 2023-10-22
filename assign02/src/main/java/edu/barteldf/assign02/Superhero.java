@@ -65,3 +65,4 @@ public class Superhero
                 "BMI: " + calculateBMI() + "\n");
     }
 }
+
