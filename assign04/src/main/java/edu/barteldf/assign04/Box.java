@@ -19,36 +19,19 @@ public class Box
     public String toString()
     {
         if (this.filled)
-            return ("Filled Box from ("+sc+","+sr+") to ("+ec+","+er+") with char '"+this.drawChar+"'");
+            return ("Filled Box from ("+sr+","+sc+") to ("+er+","+ec+") with char '"+this.drawChar+"'");
         else
-            return ("Box from ("+sc+","+sr+") to ("+ec+","+er+") with char '"+this.drawChar+"'");
+            return ("Box from ("+sr+","+sc+") to ("+er+","+ec+") with char '"+this.drawChar+"'");
     }
     public void draw(ScreenBuffer s)
     {
-        if (this.filled)
+        for (int i = this.sr; i <= this.er; i++)
         {
-            for (int i = this.sr; i < this.er; i++)
+            for (int j = this.sc; j <= this.ec; j++)
             {
-                for (int j = this.sc; j < this.ec; j++)
-                {
+                if ((this.filled)||((i==this.sr)||(i==this.er)||(j==this.sc)||(j==this.ec)))
                     s.setPos(i,j,this.drawChar);
-                }
             }
         }
-        else
-        {
-            for (int i = this.sr; i <= this.er; i++)
-            {
-                for (int j = this.sc; j <= this.ec; j++)
-                {
-                    if ((i==this.sr)||(i==this.er)||(j==this.sc)||(j==this.ec))
-                    {
-                        s.setPos(i,j,this.drawChar);
-                    }
-
-                }
-            }
-        }
-
     }
 }
