@@ -51,4 +51,21 @@ public class Circle extends Shape {
          */
     }
 
+    public double getArea() {
+        return Math.PI*radius*radius;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        boolean isEqual = false;
+        if(obj instanceof Circle other) {
+            final double EPS = 1e-08;
+            if(Math.abs(radius - other.radius) < EPS
+                && super.equals(other)) {
+                // Radii are equal
+                isEqual = true;
+            }
+        }
+        return isEqual;
+    }
 }
