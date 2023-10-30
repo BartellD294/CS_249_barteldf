@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="15.1">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>10</x>
+      <y>10</y>
+      <w>360</w>
+      <h>280</h>
+    </coordinates>
+    <panel_attributes>edu.barteldf.assign04::ScreenBuffer
+--
+-charArray: char[][]
+-rowCnt: int
+-colCnt: int
+-fillChar: char
+--
++ScreenBuffer(int rowCnt, int colCnt, char fillChar): ctor
++clear(): void
++getRowCnt(): int
++getColCnt(): int
++isValidPosition(int row, int col): boolean
++getPos(int row, int col): char
++setPos(int row, int col, char c): boolean
++toString(): String
++getDisplayString(): String
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>
