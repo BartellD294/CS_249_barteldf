@@ -19,7 +19,7 @@ test {
 }
 
 application {
-    mainClass = "edu.realemj.exercises13.Quotient"
+    mainClass = "edu.realemj.exercises12.SuperShapeLand"
     mainModule = "profexercisesmod"
 }
 
