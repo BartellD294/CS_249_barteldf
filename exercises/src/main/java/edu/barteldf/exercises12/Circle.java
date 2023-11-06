@@ -1,6 +1,7 @@
 package edu.barteldf.exercises12;
 
 import edu.barteldf.exercises09.Matrix;
+import edu.barteldf.exercises13.InvalidRadiusException;
 
 public class Circle extends Shape
 {
@@ -10,18 +11,18 @@ public class Circle extends Shape
     {
         //super();
     }
-    public Circle(double radius)
+    public Circle(double radius) throws InvalidRadiusException
     {
         setRadius(radius);
         //super();
     }
 
-    public Circle(double radius, Matrix center)
+    public Circle(double radius, Matrix center) throws InvalidRadiusException
     {
         super(center);
         setRadius(radius);
     }
-    public Circle(double radius, Matrix center, boolean filled)
+    public Circle(double radius, Matrix center, boolean filled) throws InvalidRadiusException
     {
         super(center, filled);
         setRadius(radius);
@@ -32,10 +33,12 @@ public class Circle extends Shape
     {
         return radius;
     }
-    public void setRadius(double radius)
+    public void setRadius(double radius) throws InvalidRadiusException
     {
         if (radius >= 0)
             this.radius = radius;
+        else
+            throw new InvalidRadiusException("Bad radius: " + radius);
     }
     @Override
     public String toString()
