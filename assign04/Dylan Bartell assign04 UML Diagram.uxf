@@ -9,20 +9,20 @@
       <w>360</w>
       <h>280</h>
     </coordinates>
-    <panel_attributes>edu.barteldf.assign04::ScreenBuffer
+    <panel_attributes>ScreenBuffer
 --
 -charArray: char[][]
 -rowCnt: int
 -colCnt: int
 -fillChar: char
 --
-+ScreenBuffer(int rowCnt, int colCnt, char fillChar): ctor
++ScreenBuffer(rowCnt:int, colCnt:int, fillChar:char)
 +clear(): void
 +getRowCnt(): int
 +getColCnt(): int
-+isValidPosition(int row, int col): boolean
-+getPos(int row, int col): char
-+setPos(int row, int col, char c): boolean
++isValidPosition(row:int, col:int): boolean
++getPos(row:int, col:int): char
++setPos(row:int, col:int, c:char): boolean
 +toString(): String
 +getDisplayString(): String
 --
