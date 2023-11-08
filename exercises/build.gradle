@@ -19,7 +19,7 @@ test {
 }
 
 application {
-    mainClass = "edu.barteldf.exercises13.Quotient"
+    mainClass = "edu.barteldf.exercises13.OBJModel"
     mainModule = "exercisesmod"
 }
 

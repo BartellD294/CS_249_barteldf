@@ -2,11 +2,14 @@ package edu.barteldf.exercises12;
 
 import edu.barteldf.exercises09.Matrix;
 import edu.barteldf.exercises13.InvalidRadiusException;
+import edu.barteldf.exercises14.*;
+import java.util.Scanner;
 
 public class SuperShapeLand {
     public static void main(String [] args)
     {
         try {
+            /*
             Shape s1 = new Shape();
             Shape s2 = new Shape(Matrix.makePoint3D(1, 2, 3), true);
 
@@ -20,6 +23,7 @@ public class SuperShapeLand {
             c1.setFilled(true);
             System.out.println(c2);
             System.out.println(c1);
+            */
 
             Shape c3 = new Circle();
             // Declared: Shape
@@ -27,11 +31,16 @@ public class SuperShapeLand {
             System.out.println(c3);
 
             Shape[] allShapes = new Shape[3];
-            allShapes[0] = new Shape();
+            allShapes[0] = new Circle();
             allShapes[1] = new Circle(4.0);
             allShapes[2] = new Rectangle(2, 9);
 
             printShapeAreas(allShapes);
+
+            Loadable item = new Circle();
+            item.load(new Scanner("4.5"));
+
+            Circle grief = new Circle(-3.0);
         }
         catch(InvalidRadiusException r)
         {

@@ -2,8 +2,10 @@ package edu.barteldf.exercises12;
 
 import edu.barteldf.exercises09.Matrix;
 import edu.barteldf.exercises13.InvalidRadiusException;
+import edu.barteldf.exercises14.Loadable;
+import java.util.Scanner;
 
-public class Circle extends Shape
+public class Circle extends Shape implements Loadable
 {
 
     private double radius = 1.0;
@@ -29,6 +31,11 @@ public class Circle extends Shape
         //setCenter(center);
         //setFilled(filled);
     }
+
+    public void load(Scanner input)
+    {
+        radius = input.nextDouble();
+    }
     public double getRadius()
     {
         return radius;
@@ -39,6 +46,10 @@ public class Circle extends Shape
             this.radius = radius;
         else
             throw new InvalidRadiusException("Bad radius: " + radius);
+    }
+    public double getArea()
+    {
+        return 0.0;
     }
     @Override
     public String toString()

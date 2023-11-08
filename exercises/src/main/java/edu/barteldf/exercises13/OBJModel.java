@@ -28,4 +28,63 @@ public class OBJModel
             }
         }
     }
+    public void load(String filename) throws IOException
+    {
+        try (Scanner fileInput = new Scanner(new File(filename));)
+        {
+            while (fileInput.hasNextLine())
+            {
+                String line = fileInput.nextLine();
+                line = line.trim();
+                if (!line.isEmpty())
+                {
+                    Scanner parseLine = new Scanner(line);
+                    String token = parseLine.next();
+                    if (token.equals("v"))
+                    {
+                        //vertex
+                        double x = parseLine.nextDouble();
+                        double y = parseLine.nextDouble();
+                        double z = parseLine.nextDouble();
+                        Matrix v = Matrix.makePoint3D(x,y,z);
+                        vertices.add(v);
+                    }
+                    else if (token.equals("f"))
+                    {
+                        //face
+                        int i0 = parseLine.nextInt();
+                        int i1 = parseLine.nextInt();
+                        int i2 = parseLine.nextInt();
+                        Face f = new Face(i0, i1, i2);
+                        faces.add(f);
+                    }
+                }
+            }
+        }
+    }
+    public void transform(Matrix t)
+    {
+        for (Matrix v: vertices)
+        {
+            v.copyFrom(t.multiply(v));
+        }
+    }
+
+    public static void main(String[] args)
+    {
+        OBJModel model = new OBJModel();
+        try
+        {
+            model.load("bunny.obj");
+            Matrix s = Matrix.makeScaling3D(1, 2, 1);
+            Matrix r = Matrix.makeZRotation3D(45);
+            Matrix t = r.multiply(s);
+            model.transform(t);
+            model.save("bunnyTransformed.obj");
+        }
+        catch (Exception e)
+        {
+            System.err.println(e);
+        }
+    }
 }
