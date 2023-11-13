@@ -9,7 +9,7 @@ public class Tree extends Giant
 
     public String toString()
     {
-        return (super.toString() + "of the trees");
+        return (super.toString() + " of the trees");
     }
 
     public String speak()

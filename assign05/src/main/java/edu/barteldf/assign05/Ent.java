@@ -9,7 +9,7 @@ public class Ent extends Tree
 
     public String toString()
     {
-        return ("Ent" + super.toString());
+        return ("Ent " + super.toString());
     }
 
     public String speak()
