@@ -8,7 +8,7 @@ include ':assign01'
 include ':assign02'
 include ':assign03'
 include ':assign04'
-include ':exercises'
 include ':assign05'
+include ':exercises'
 
 include ':profexercises'
