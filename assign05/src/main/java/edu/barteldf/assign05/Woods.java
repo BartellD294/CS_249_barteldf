@@ -23,6 +23,9 @@ public class Woods
                 case ("TROLL"):
                     g = new Troll(name);
                     break;
+                case ("TREE"):
+                    g = new Tree(name);
+                    break;
                 case ("ENT"):
                     g = new Ent(name);
                     break;
@@ -38,10 +41,10 @@ public class Woods
 
     public boolean addGiant(String name, String typeName)
     {
-        Giant myg = this.createGiant(name, typeName);
-        if (myg!=null)
+        //Giant myg = this.createGiant(name, typeName);
+        if (this.createGiant(name, typeName) != null)
         {
-            this.giants.add(myg);
+            this.giants.add(this.createGiant(name, typeName));
             return true;
         }
         else
@@ -77,7 +80,7 @@ public class Woods
         {
             if (g instanceof Tree)
             {
-                System.out.println("- " + ((Tree) g).speak());
+                System.out.println("- " + g.toString() + ": " + ((Tree) g).speak());
             }
         }
     }
@@ -89,7 +92,7 @@ public class Woods
         {
             if (g instanceof Troll)
             {
-                System.out.println("- " + ((Troll) g).cook());
+                System.out.println("- " + g.toString() + ": " + ((Troll) g).cook());
             }
         }
     }
