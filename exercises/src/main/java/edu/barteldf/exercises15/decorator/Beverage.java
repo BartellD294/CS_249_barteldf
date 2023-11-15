@@ -1,0 +1,19 @@
+package edu.barteldf.exercises15.decorator;
+
+public abstract class Beverage
+{
+    private String description;
+
+    protected Beverage() {}
+    protected Beverage(String desc)
+    {
+        this.description = desc;
+    }
+
+    public String getDescription()
+    {
+        return this.description;
+    }
+
+    public abstract double getCost();
+}
