@@ -19,7 +19,7 @@ test {
 }
 
 application {
-    mainClass = "edu.barteldf.assign05.BookOfLostTales"
+    mainClass = "edu.barteldf.assign05.Silmarillion"
     mainModule = "assign05mod"    
 }
 
