@@ -1,19 +1,16 @@
 package edu.barteldf.exercises15.observer;
-
 import java.util.ArrayList;
-import java.util.Observer;
-
 public class Batsignal implements Subject {
     private String activeCrime = "";
-    private ArrayList<java.util.Observer> crimeFighters = new ArrayList<>();
+    private ArrayList<Observer> crimeFighters = new ArrayList<>();
 
     @Override
-    public void registerObserver(java.util.Observer ob) {
+    public void registerObserver(Observer ob) {
         crimeFighters.add(ob);
     }
 
     @Override
-    public void removeObserver(java.util.Observer ob) {
+    public void removeObserver(Observer ob) {
         crimeFighters.remove(ob);
     }
 
