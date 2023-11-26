@@ -1,18 +1,16 @@
 package edu.barteldf.exercises15.decorator;
 
-public abstract class Beverage
-{
-    private String description;
+public abstract class Beverage {
+    private String description = "";
 
     protected Beverage() {}
-    protected Beverage(String desc)
-    {
-        this.description = desc;
+
+    protected Beverage(String desc) {
+        description = desc;
     }
 
-    public String getDescription()
-    {
-        return this.description;
+    public String getDescription() {
+        return description;
     }
 
     public abstract double getCost();

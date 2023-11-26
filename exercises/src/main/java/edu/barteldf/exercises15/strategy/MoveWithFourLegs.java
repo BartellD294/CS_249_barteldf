@@ -1,10 +1,8 @@
 package edu.barteldf.exercises15.strategy;
 
-public class MoveWithFourLegs implements Moveable
-{
+public class MoveWithFourLegs implements Moveable {
     @Override
-    public void move()
-    {
+    public void move() {
         System.out.println("Move with 4 legs!");
     }
 }

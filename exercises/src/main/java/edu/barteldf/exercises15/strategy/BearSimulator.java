@@ -2,26 +2,22 @@ package edu.barteldf.exercises15.strategy;
 
 import java.util.ArrayList;
 
-public class BearSimulator
-{
-    public static void main(String[] args)
-    {
+public class BearSimulator {
+    public static void main(String [] args) {
         ArrayList<Bear> allBears = new ArrayList<>();
         allBears.add(new GrizzlyBear());
         allBears.add(new TeddyBear());
         allBears.add(new GrizzlyBear());
 
         System.out.println("BEARS!");
-        for (Bear b: allBears)
-        {
+        for(Bear b: allBears) {
             b.performMove();
         }
 
         allBears.get(2).setMoveBehavior(new MoveWithTwoLegs());
 
         System.out.println("BEARS AGAIN!");
-        for (Bear b: allBears)
-        {
+        for(Bear b: allBears) {
             b.performMove();
         }
     }

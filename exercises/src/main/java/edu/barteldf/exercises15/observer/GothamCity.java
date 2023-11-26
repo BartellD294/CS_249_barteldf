@@ -1,9 +1,7 @@
 package edu.barteldf.exercises15.observer;
 
-public class GothamCity
-{
-    public static void main(String[] args)
-    {
+public class GothamCity {
+    public static void main(String [] args) {
         Batsignal batsignal = new Batsignal();
 
         Batperson bruce = new Batperson("Batman");
@@ -11,9 +9,11 @@ public class GothamCity
         Batperson tim = new Batperson("Robin");
         Batperson barbara = new Batperson("Batgirl");
 
-        Batperson[] batfam = {bruce, dick, tim, barbara};
-        for (Batperson p: batfam)
-        {
+        Batperson [] batfam = {
+                bruce, dick, tim, barbara
+        };
+
+        for(Batperson p: batfam) {
             batsignal.registerObserver(p);
         }
 
