@@ -14,4 +14,5 @@ module exercisesmod {
     exports edu.barteldf.exercises15.observer;
     exports edu.barteldf.exercises15.strategy;
     exports edu.barteldf.exercises15.decorator;
+    exports edu.barteldf.exercises16;
 }
