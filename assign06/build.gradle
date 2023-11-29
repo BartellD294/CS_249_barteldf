@@ -1,0 +1,42 @@
+plugins {   
+    id 'application'   
+}
+
+version = '1.0'
+
+repositories {  
+    mavenCentral()    
+}
+
+dependencies {
+    implementation(project(":assign04"))
+    testImplementation(project(":assign04"))
+    testImplementation(testFixtures(project(":coretest")))
+    testImplementation 'org.testng:testng:7.8.0'
+    testImplementation 'org.slf4j:slf4j-log4j12:1.7.36'
+}
+
+test {
+    useTestNG()
+}
+
+application {
+    mainClass = "edu.realemj.assign06.Daggerfall"
+    mainModule = "assign06mod"
+    applicationDistribution.from('data') {
+        into 'bin/data'
+    }
+}
+
+task runApp(type: JavaExec, dependsOn: build) {
+    classpath = sourceSets.main.runtimeClasspath
+    jvmArgs = ['--module-path', classpath.asPath]
+    mainModule = "assign06mod"
+    group "application"
+    standardInput = System.in
+}
+
+
+
+
+
