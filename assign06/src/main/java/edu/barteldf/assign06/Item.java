@@ -29,7 +29,7 @@ public class Item implements Loadable
         {
             this.setID("");
             this.setValue(0);
-            throw new GameFileException("Error loading item", e);
+            throw new GameFileException("Error loading Item", e);
         }
     }
 }

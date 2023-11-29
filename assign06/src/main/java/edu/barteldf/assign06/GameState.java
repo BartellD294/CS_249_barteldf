@@ -55,6 +55,7 @@ public class GameState implements Loadable
                 sb.append("* " + c.toString() + "\n");
             }
         }
+        sb.append("INVENTORY:\n");
         for (Loadable i: this.ls)
         {
             if (i instanceof Item)
