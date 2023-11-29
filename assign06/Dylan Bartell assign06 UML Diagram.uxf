@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="15.1">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>0</x>
+      <y>10</y>
+      <w>210</w>
+      <h>230</h>
+    </coordinates>
+    <panel_attributes>Item
+--
+-ID = "": String
+-value = 0: int
+--
++Item()
++Item(ID: String, value: int)
++getID(): String
++getValue(): int
++setID(ID: String): void
++setValue(value: int): void
++toString(): String
++load(input: Scanner): void
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>220</x>
+      <y>10</y>
+      <w>210</w>
+      <h>210</h>
+    </coordinates>
+    <panel_attributes>/Creature/
+--
+-row = 0: int
+-col = 0: int
+--
+#Creature()
+#Creature(row: int, col: int)
++getRow(): int
++getCol(): int
++setRow(row: int): void
++setCol(col: int): void
++load(input: Scanner): void
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>440</x>
+      <y>10</y>
+      <w>290</w>
+      <h>190</h>
+    </coordinates>
+    <panel_attributes>Tome
+--
+-skill = "": String
+--
++Tome(): ctor
++Tome(ID: String, value: int, skill: String)
++getSkill(): String
++setSkill(skill: String): void
++read(): void
++toString(): String
++load(input: Scanner): void
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>400</x>
+      <y>390</y>
+      <w>330</w>
+      <h>160</h>
+    </coordinates>
+    <panel_attributes>GameState
+--
+-ls = new ArrayList(): ArrayList&lt;Loadable&gt;
+-map = new ScreenBuffer(12, 30, '.'): ScreenBuffer
+--
++createLoadable(typeName: String): Loadable
++load(input: Scanner): void
++toString(): String
++save(filename: String): void
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>0</x>
+      <y>250</y>
+      <w>210</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>Rat
+--
+--
++Rat()
++Rat(int row, int col)
++toString(): String
++draw(map: ScreenBuffer): void
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>220</x>
+      <y>250</y>
+      <w>210</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>Skeleton
+--
+--
++Skeleton()
++Skeleton(row: int, col: int)
++toString(): String
++draw(map: ScreenBuffer): void
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>440</x>
+      <y>250</y>
+      <w>220</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;interface&gt;&gt;
+Drawable
+--
+--
++draw(map: ScreenBuffer): void
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>0</x>
+      <y>380</y>
+      <w>220</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;interface&gt;&gt;
+Loadable
+--
+--
++load(input: Scanner): void
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>
