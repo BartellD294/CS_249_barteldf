@@ -1,4 +1,8 @@
 module exercisesmod {
+    requires javafx.controls;
+    requires javafx.fxml;
+    requires transitive javafx.graphics;
+    opens edu.barteldf.exercises18 to javafx.fxml;
     exports edu.barteldf.exercises02;
     exports edu.barteldf.exercises03;
     exports edu.barteldf.exercises04;
@@ -15,4 +19,6 @@ module exercisesmod {
     exports edu.barteldf.exercises15.strategy;
     exports edu.barteldf.exercises15.decorator;
     exports edu.barteldf.exercises16;
+    exports edu.barteldf.exercises18;
+
 }
