@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="15.1">
+  <zoom_level>8</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>216</x>
+      <y>192</y>
+      <w>144</w>
+      <h>168</h>
+    </coordinates>
+    <panel_attributes>Item
+--
+-ID: String
+-value: int
+--
++Item()
++Item(ID: String, value: int)
++getID(): String
++getValue(): int
++setID(ID: String): void
++setValue(value: int): void
++toString(): String
++load(input: Scanner): void
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>576</x>
+      <y>200</y>
+      <w>144</w>
+      <h>168</h>
+    </coordinates>
+    <panel_attributes>/Creature/
+--
+-row: int
+-col: int
+--
+#Creature()
+#Creature(row: int, col: int)
++getRow(): int
++getCol(): int
++setRow(row: int): void
++setCol(col: int): void
++load(input: Scanner): void
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>176</x>
+      <y>400</y>
+      <w>208</w>
+      <h>144</h>
+    </coordinates>
+    <panel_attributes>Tome
+--
+-skill: String
+--
++Tome()
++Tome(ID: String, value: int, skill: String)
++getSkill(): String
++setSkill(skill: String): void
++read(): void
++toString(): String
++load(input: Scanner): void
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>472</x>
+      <y>424</y>
+      <w>168</w>
+      <h>96</h>
+    </coordinates>
+    <panel_attributes>Rat
+--
+--
++Rat()
++Rat(int row, int col)
++toString(): String
++draw(map: ScreenBuffer): void
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>664</x>
+      <y>424</y>
+      <w>168</w>
+      <h>96</h>
+    </coordinates>
+    <panel_attributes>Skeleton
+--
+--
++Skeleton()
++Skeleton(row: int, col: int)
++toString(): String
++draw(map: ScreenBuffer): void
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>464</x>
+      <y>24</y>
+      <w>176</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;interface&gt;&gt;
+/Drawable/
+--
+--
+/+draw(map: ScreenBuffer): void/
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>312</x>
+      <y>24</y>
+      <w>144</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;interface&gt;&gt;
+/Loadable/
+--
+--
+/+load(input: Scanner): void/
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>552</x>
+      <y>360</y>
+      <w>96</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>100.0;10.0;10.0;80.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>648</x>
+      <y>360</y>
+      <w>112</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;120.0;80.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>544</x>
+      <y>88</y>
+      <w>112</w>
+      <h>128</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>10.0;10.0;120.0;140.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>392</x>
+      <y>88</y>
+      <w>256</w>
+      <h>128</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>10.0;10.0;300.0;140.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>280</x>
+      <y>88</y>
+      <w>104</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>110.0;10.0;10.0;130.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>272</x>
+      <y>352</y>
+      <w>24</w>
+      <h>64</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;60.0</additional_attributes>
+  </element>
+</diagram>
