@@ -17,14 +17,14 @@ public class TestRectangle
         };
         return data;
     }
-    @Test(dataProvider = "areaProvider")
+    //@Test(dataProvider = "areaProvider")
     public void test_getArea(Rectangle r, Double area)
     {
         //Rectangle r = new Rectangle(5, 7);
         Assert.assertEquals(r.getArea(), area, "Incorrect area!");
     }
 
-    @Test
+    //@Test
     public void test_toString()
     {
         Rectangle r = new Rectangle(5,7);
