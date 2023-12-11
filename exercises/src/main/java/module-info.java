@@ -11,5 +11,6 @@ module exercisesmod {
     exports edu.barteldf.exercises05;
     exports edu.barteldf.exercises06;
     exports edu.barteldf.exercises18;
+    exports edu.barteldf.exercises19;
 
 }

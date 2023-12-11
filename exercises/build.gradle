@@ -25,7 +25,7 @@ test {
 }
 
 application {
-    mainClass = "edu.barteldf.exercises18.BasicFX"
+    mainClass = "edu.barteldf.exercises19.ClassA"
     mainModule = "exercisesmod"
 }
 
